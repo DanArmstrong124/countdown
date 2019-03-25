@@ -6,6 +6,7 @@ var count_3 = new Date("Apr 03, 2019 09:00:00").getTime();
 var count_4 = new Date("Apr 12, 2019 17:00:00").getTime();
 var count_5 = new Date("Apr 14, 2019 16:00:00").getTime();
 var count_6 = new Date("Mar 31, 2019 00:00:00").getTime();
+var count_7 = new Date("Apr 12, 2019 00:00:00").getTime();
 
 var x = setInterval(function() {
 
@@ -20,6 +21,7 @@ var x = setInterval(function() {
     var t_4 = count_4 - now;
     var t_5 = count_5 - now;
     var t_6 = count_6 - now;
+    var t_7 = count_7 - now;
 
     /*SETTING TIME VARIABLES*/
     var days0 = Math.floor(t_0 / (1000 * 60 * 60 * 24));
@@ -56,6 +58,11 @@ var x = setInterval(function() {
     var hours6 = Math.floor((t_6 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes6 = Math.floor((t_6 % (1000 * 60 * 60)) / (1000 * 60));
     var seconds6 = Math.floor((t_6 % (1000 * 60)) / 1000);
+
+    var days7 = Math.floor(t_7 / (1000 * 60 * 60 * 24));
+    var hours7 = Math.floor((t_7 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes7 = Math.floor((t_7 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds7 = Math.floor((t_7 % (1000 * 60)) / 1000);
 
     /*SETTING EACH COUNTDOWN TO THE INDEX.HTML*/
     document.getElementById("mentor").innerHTML = days0 + "d " +
@@ -102,9 +109,15 @@ var x = setInterval(function() {
 
     document.getElementById("mday").innerHTML = days6 + "d " +
         hours6 + "h " + minutes6 + "m " + seconds6 + "s ";
-    if (t_5 < 0) {
+    if (t_6 < 0) {
         clearInterval(x);
         document.getElementById("mday").innerHTML = "HAPPY MOTHERS DAY!";
     }
 
+    document.getElementById("mday").innerHTML = days7 + "d " +
+        hours7 + "h " + minutes7 + "m " + seconds7 + "s ";
+    if (t_7 < 0) {
+        clearInterval(x);
+        document.getElementById("ryanbday").innerHTML = "HAPPY BIRTHDAY RYAN!";
+    }
 }, 1000);
