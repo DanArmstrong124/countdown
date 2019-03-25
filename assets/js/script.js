@@ -114,7 +114,7 @@ var x = setInterval(function() {
         document.getElementById("mday").innerHTML = "HAPPY MOTHERS DAY!";
     }
 
-    document.getElementById("mday").innerHTML = days7 + "d " +
+    document.getElementById("ryanbday").innerHTML = days7 + "d " +
         hours7 + "h " + minutes7 + "m " + seconds7 + "s ";
     if (t_7 < 0) {
         clearInterval(x);
