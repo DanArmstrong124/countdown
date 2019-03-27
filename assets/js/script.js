@@ -1,5 +1,5 @@
 /*SETTING EACH COUNTDOWN*/
-var count_0 = new Date("Dec 25, 2019 00:00:00").getTime();
+var count_0 = new Date("Jun 11, 2019 00:00:00").getTime();
 var count_1 = new Date("Mar 30, 2019 18:00:00").getTime();
 var count_2 = new Date("Apr 01, 2019 00:00:00").getTime();
 var count_3 = new Date("Apr 03, 2019 09:00:00").getTime();
@@ -65,11 +65,11 @@ var x = setInterval(function() {
     var seconds7 = Math.floor((t_7 % (1000 * 60)) / 1000);
 
     /*SETTING EACH COUNTDOWN TO THE INDEX.HTML*/
-    document.getElementById("christmas").innerHTML = days0 + "d " +
+    document.getElementById("olibday").innerHTML = days0 + "d " +
         hours0 + "h " + minutes0 + "m " + seconds0 + "s ";
     if (t_0 < 0) {
         clearInterval(x);
-        document.getElementById("mentor").innerHTML = "CHRISTMAS!";
+        document.getElementById("olibday").innerHTML = "HAPPY BIRTHDAY OLI!";
     }
 
     document.getElementById("sasbday").innerHTML = days1 + "d " +
